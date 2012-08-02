@@ -35,9 +35,8 @@ without my consent. Thanks!
 		position: absolute;
 		bottom: -30px;
 		z-index: 8001;
-		-webkit-animation: shark-swim 8s infinite ease-in-out;
-		-moz-animation: shark-swim 8s infinite ease-in-out;
-		animation: shark-swim 8s infinite ease-in-out;
+		-webkit-animation: shark-bob 8s infinite ease-in-out;
+		animation:         shark-bob 8s infinite ease-in-out;
 	}
 	
 	#an-ship {
@@ -46,8 +45,7 @@ without my consent. Thanks!
 		left: 120px;
 		z-index: 8001;
 		-webkit-animation: rockingboat 5s infinite ease-in-out;
-		-moz-animation: rockingboat 5s infinite ease-in-out;
-		animation: rockingboat 5s infinite ease-in-out;
+		animation:         rockingboat 5s infinite ease-in-out;
 	}
 	
 /* the animated waves */
@@ -65,6 +63,7 @@ without my consent. Thanks!
 	background-image: url(../images/waves1.png);
 	z-index: 8000;
 	-webkit-animation: wave1 23s infinite linear;
+	animation:         wave1 23s infinite linear;
 }
 	
 #an-w2 {
@@ -73,6 +72,7 @@ without my consent. Thanks!
 	background-image: url(../images/waves2.png);
 	z-index: 8003;
 	-webkit-animation: wave2 17s infinite linear;
+	animation:         wave2 17s infinite linear;
 }	
 
 	/* these are the transparent waves at the very bottom */
@@ -110,18 +110,18 @@ ANIMATION SYNTAX
 
 /* webkit browsers */
 @-webkit-keyframes rockingboat {
-   0%, 100% { -webkit-transform: rotate(2deg);               bottom: 80px; }
-   25%      { -webkit-transform: rotate(-2deg); left: 130px; bottom: 60px; }
+   0%, 100% { -webkit-transform: rotate(2deg);               bottom: 100px; }
+   25%      { -webkit-transform: rotate(-2deg); left: 130px; bottom: 70px; }
    50% 		{ -webkit-transform: rotate(0deg);  left: 140px;               }
-   75%      { -webkit-transform: rotate(-2deg); left: 130px; bottom: 70px; }
+   75%      { -webkit-transform: rotate(-2deg); left: 130px; bottom: 80px; }
 }
 
 /* IE (10&Up), Firefox (latest) support unprefixed (screw Opera) */ 
 @keyframes rockingboat {
-   0%, 100% { -webkit-transform: rotate(2deg);               bottom: 80px; }
-   25%      { -webkit-transform: rotate(-2deg); left: 130px; bottom: 60px; }
-   50% 		{ -webkit-transform: rotate(0deg);  left: 140px;               }
-   75%      { -webkit-transform: rotate(-2deg); left: 130px; bottom: 70px; }
+   0%, 100% { transform: rotate(2deg);               bottom: 80px; }
+   25%      { transform: rotate(-2deg); left: 130px; bottom: 60px; }
+   50% 		{ transform: rotate(0deg);  left: 140px;               }
+   75%      { transform: rotate(-2deg); left: 130px; bottom: 70px; }
 }
 
 /* background waves */
@@ -140,15 +140,44 @@ ANIMATION SYNTAX
 
 /* webkit browsers */
 @-webkit-keyframes wave2 {
-    0%  { background-position-x: 0px;     }
-   50%  { background-position-y: 15px;    } 
+     0% { background-position-x: 0px;     }
+    50% { background-position-y: 15px;    } 
    100% { background-position-x: -1200px; }
 }
 
 /* IE (10&Up), Firefox (latest) support unprefixed (screw Opera) */ 
 @keyframes wave2 {
-    0%  { background-position-x: 0px;    }
-   50%  { background-position-y: 15px;   } 
+     0% { background-position-x: 0px;    }
+    50% { background-position-y: 15px;   } 
    100% { ackground-position-x: -1200px; }
 }
 
+/* webkit browsers */
+@-webkit-keyframes shark-bob {
+    0% { left: 250px;  bottom: -150px; display: none;  z-index: -1;   -webkit-transform: rotate(1deg);   }
+    7% {               bottom: -95px;  display: block; z-index: 8002;                                    }
+   60% { left: 575px;  bottom: -20px;                                 -webkit-transform: rotate(-10deg); } 
+   70% { left: 700px;                                                 -webkit-transform: rotate(-13deg); }
+   73% {               bottom: -10px;                                 -webkit-transform: rotate(-16deg); }
+   75% { left: 850px;  bottom: -5px;                                  -webkit-transform: rotate(-13deg); }
+   78% { left: 850px;  bottom: 5px;                                   -webkit-transform: rotate(-8deg);  }
+   81% { left: 850px;  bottom: -10px;                                 -webkit-transform: rotate(-5deg);  }
+   90% { left: 900px;  bottom: -60px;                                 -webkit-transform: rotate(0deg);   }
+   95% { left: 1000px; bottom: -80px;  display: block; z-index: 8002;                                    }
+   99% { left: 1000px; bottom: -100px; display: none;  z-index: -1;                                      }
+}
+
+/* IE (10&Up), Firefox (latest) support unprefixed (screw Opera) */ 
+@keyframes shark-bob {
+    0% { left: 250px;  bottom: -150px; display: none;  z-index: -1;   transform: rotate(1deg);   }
+    7% {               bottom: -95px;  display: block; z-index: 8002;                            }
+   60% { left: 575px;  bottom: -20px;                                 transform: rotate(-10deg); } 
+   70% { left: 700px;                                                 transform: rotate(-13deg); }
+   73% {               bottom: -10px;                                 transform: rotate(-16deg); }
+   75% { left: 850px;  bottom: -5px;                                  transform: rotate(-13deg); }
+   78% { left: 850px;  bottom: 5px;                                   transform: rotate(-8deg);  }
+   81% { left: 850px;  bottom: -10px;                                 transform: rotate(-5deg);  }
+   90% { left: 900px;  bottom: -60px;                                 transform: rotate(0deg);   }
+   95% { left: 1000px; bottom: -80px;  display: block; z-index: 8002;                            }
+   99% { left: 1000px; bottom: -100px; display: none;  z-index: -1;                              }
+}
