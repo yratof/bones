@@ -537,10 +537,17 @@ table {
     *zoom: 1;
 }
 
-#container {
-	overflow: hidden;
-}
-
 .wrap {
 	position: relative;
 }
+
+#header {
+	background: #fff;
+	padding: 10px;
+}
+
+	#logo {
+		width: 75px;
+		height: 75px;
+		margin: 0 auto;
+	}
