@@ -17,10 +17,8 @@ without my consent. Thanks!
 
 	
 /* clouds background */
-#bones-banner {
-	background-image: url(../images/backdrop.png);
-	background-position: top center;
-	background-repeat: no-repeat;
+#melanie-banner {
+	background: url(../images/backdrop.png) top center no-repeat;
 	height: 580px;
 	max-width: 1400px;
 	margin: 0 auto 2.2em;
@@ -29,22 +27,15 @@ without my consent. Thanks!
 	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.33);
 }	
 
-	
-	#an-shark {
-		position: absolute;
-		z-index: 8001;
-		-webkit-animation: shark-bob 8s infinite ease-in-out;
-		animation:         shark-bob 8s infinite ease-in-out;
-	}
-	
-	#an-ship {
-		position: absolute;
-		bottom: 45px;
-		left: 120px;
-		z-index: 8001;
-		-webkit-animation: rockingboat 5s infinite ease-in-out;
-		animation:         rockingboat 5s infinite ease-in-out;
-	}
+/* the pirate ship */	
+#an-ship {
+	position: absolute;
+	bottom: 45px;
+	left: 120px;
+	z-index: 8001;
+	-webkit-animation: rockingboat 5s infinite ease-in-out;
+	animation:         rockingboat 5s infinite ease-in-out;
+}
 	
 /* the animated waves */
 #an-w1,
@@ -83,17 +74,14 @@ without my consent. Thanks!
 		z-index: 8004;
 		display: block;
 	}
-	
-/*********************
-BONES INTRO & COPY
-*********************/
 
-#bones-intro {
-	width: 400px;
-	float: right;
+/* the animated shark */	
+#an-shark {
+	position: absolute;
+	z-index: 8001;
+	-webkit-animation: shark-bob 8s infinite ease-in-out;
+	animation:         shark-bob 8s infinite ease-in-out;
 }
-
-
 
 /*********************
 ANIMATION SYNTAX
@@ -152,30 +140,30 @@ ANIMATION SYNTAX
 
 /* webkit browsers */
 @-webkit-keyframes shark-bob {
-    0% { left: 250px;  bottom: -10px; opacity: 0;    -webkit-transform: rotate(1deg);   }
+    0% { left: 250px;  bottom: -10px; opacity: 0;                -webkit-transform: rotate(1deg);   }
     7% {               bottom: 65px;  opacity: 1; z-index: 8002;                                    }
-   60% { left: 575px;  bottom: 70px;                                 -webkit-transform: rotate(-10deg); } 
-   70% { left: 700px;                                                 -webkit-transform: rotate(-13deg); }
-   73% {               bottom: 10px;                                 -webkit-transform: rotate(-16deg); }
-   75% { left: 850px;  bottom: 20px;                                  -webkit-transform: rotate(-13deg); }
-   78% {                                                -webkit-transform: rotate(-8deg);  }
-   81% {                                              -webkit-transform: rotate(-5deg);  }
-   90% { left: 900px;  bottom: 30px;                                 -webkit-transform: rotate(0deg);   }
-   95% { left: 1000px; bottom: 15px;  opacity: 1; z-index: 8002;                                  }
-   99% { left: 1000px; bottom: 20px; opacity: 0; z-index: -1;                                      }
+   60% { left: 575px;  bottom: 70px;                             -webkit-transform: rotate(-10deg); } 
+   70% { left: 700px;                                            -webkit-transform: rotate(-13deg); }
+   73% {               bottom: 10px;                             -webkit-transform: rotate(-16deg); }
+   75% { left: 850px;  bottom: 20px;                             -webkit-transform: rotate(-13deg); }
+   78% {                                                         -webkit-transform: rotate(-8deg);  }
+   81% {                                                         -webkit-transform: rotate(-5deg);  }
+   90% { left: 900px;  bottom: 30px;                             -webkit-transform: rotate(0deg);   }
+   95% { left: 1000px; bottom: 15px;  opacity: 1; z-index: 8002;                                    }
+   99% { left: 1000px; bottom: 20px;  opacity: 0; z-index: -1;                                      }
 }
 
 /* IE (10&Up), Firefox (latest) support unprefixed (screw Opera) */ 
 @keyframes shark-bob {
-    0% { left: 250px;  bottom: -150px; display: none;  z-index: -1;   transform: rotate(1deg);   }
-    7% {               bottom: -95px;  display: block; z-index: 8002;                            }
-   60% { left: 575px;  bottom: -20px;                                 transform: rotate(-10deg); } 
-   70% { left: 700px;                                                 transform: rotate(-13deg); }
-   73% {               bottom: -10px;                                 transform: rotate(-16deg); }
-   75% { left: 850px;  bottom: -5px;                                  transform: rotate(-13deg); }
-   78% { left: 850px;  bottom: 5px;                                   transform: rotate(-8deg);  }
-   81% { left: 850px;  bottom: -10px;                                 transform: rotate(-5deg);  }
-   90% { left: 900px;  bottom: -60px;                                 transform: rotate(0deg);   }
-   95% { left: 1000px; bottom: -80px;  display: block; z-index: 8002;                            }
-   99% { left: 1000px; bottom: -100px; display: none;  z-index: -1;                              }
+   0% { left: 250px;  bottom: -10px; opacity: 0;                 transform: rotate(1deg);   }
+   7% {               bottom: 65px;  opacity: 1; z-index: 8002;                             }
+  60% { left: 575px;  bottom: 70px;                              transform: rotate(-10deg); } 
+  70% { left: 700px;                                             transform: rotate(-13deg); }
+  73% {               bottom: 10px;                              transform: rotate(-16deg); }
+  75% { left: 850px;  bottom: 20px;                              transform: rotate(-13deg); }
+  78% {                                                          transform: rotate(-8deg);  }
+  81% {                                                          transform: rotate(-5deg);  }
+  90% { left: 900px;  bottom: 30px;                              transform: rotate(0deg);   }
+  95% { left: 1000px; bottom: 15px;  opacity: 1; z-index: 8002;                             }
+  99% { left: 1000px; bottom: 20px;  opacity: 0; z-index: -1;                               }
 }
