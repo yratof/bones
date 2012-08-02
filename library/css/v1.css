@@ -43,7 +43,7 @@ without my consent. Thanks!
 	#an-ship {
 		position: absolute;
 		bottom: 45px;
-		left: 30px;
+		left: 120px;
 		z-index: 8001;
 		-webkit-animation: rockingboat 5s infinite ease-in-out;
 		-moz-animation: rockingboat 5s infinite ease-in-out;
@@ -61,14 +61,14 @@ without my consent. Thanks!
 
 #an-w1 {
 	height: 78px;
-	bottom: 130px;
+	bottom: 135px;
 	background-image: url(../images/waves1.png);
 	z-index: 8000;
 	-webkit-animation: wave1 23s infinite linear;
 }
 	
 #an-w2 {
-	height: 155px;
+	height: 165px;
 	bottom: 0;
 	background-image: url(../images/waves2.png);
 	z-index: 8003;
@@ -110,11 +110,11 @@ ANIMATION SYNTAX
 
 /* ship rocking */
 @-webkit-keyframes rockingboat {
-   0%, 100% { -webkit-transform: rotate(2deg); bottom: 70px; }
+   0%, 100% { -webkit-transform: rotate(2deg); bottom: 80px; }
    10%      { }
-   25%      { -webkit-transform: rotate(-2deg); left: 130px; bottom: 55px; }
+   25%      { -webkit-transform: rotate(-2deg); left: 130px; bottom: 60px; }
    50% 		{ -webkit-transform: rotate(0deg); left: 140px;  }
-   75%      { -webkit-transform: rotate(-2deg); left: 130px; bottom: 65px; }
+   75%      { -webkit-transform: rotate(-2deg); left: 130px; bottom: 70px; }
    90%      { }
 }
 
