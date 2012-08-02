@@ -540,3 +540,7 @@ table {
 #container {
 	overflow: hidden;
 }
+
+.wrap {
+	position: relative;
+}

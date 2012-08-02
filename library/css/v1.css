@@ -13,9 +13,8 @@ expiriment to achieve similar goals, but don't use these images
 without my consent. Thanks!
 ******************************************************************/
 
-/*********************
-THE SKY
-*********************/
+
+
 	
 /* clouds bg */
 #bones-banner {
@@ -106,6 +105,15 @@ THE SKY
 		display: block;
 	}
 	
+/*********************
+BONES INTRO & COPY
+*********************/
+
+#bones-intro {
+	width: 400px;
+	float: right;
+}
+
 
 
 /*********************
