@@ -32,32 +32,25 @@
     		var h=document.getElementsByTagName("html")[0];h.className+=" wf-loading";var t=setTimeout(function(){h.className=h.className.replace(/( |^)wf-loading( |$)/g,"");h.className+=" wf-inactive"},config.scriptTimeout);var tk=document.createElement("script");tk.src='//use.typekit.net/'+config.kitId+'.js';tk.type="text/javascript";tk.async="true";tk.onload=tk.onreadystatechange=function(){var a=this.readyState;if(a&&a!="complete"&&a!="loaded")return;clearTimeout(t);try{Typekit.load(config)}catch(b){}};var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(tk,s)
   		})();
 		</script>
+		
+		<!-- reset and general styles -->
+		<link rel="stylesheet" href="library/css/base.css">
 
-		<!-- styles -->
+		<!-- the pirate ship by Melanie Matthews -->
 		<link rel="stylesheet" href="library/css/v1.css">
 
 		<!-- modernizr -->
 		<script src="http://cdn.themble.com/js/modernizr.custom.min.js"></script>
-		
-		<!-- standard page styles -->
-		<style>
-			#container {
-				width: 90%;
-				margin: 0 auto;
-			}
-		</style>
 
 	</head>
 
 	<body>
 
-		<div id="container">
+		<header id="header" class="clearfix" role="banner">
 
-			<header class="header clearfix" role="banner">
+			<img id="logo" src="http://cdn.themble.com/img/logo.png" alt="Themble" height="125" width="125" />
 
-				<img id="logo" src="http://cdn.themble.com/img/logo.png" alt="Themble" height="125" width="125" />
-
-			</header> <!-- end header -->
+		</header> <!-- end header -->
 
 			<div id="bones-banner" class="banner-top">
 			
