@@ -1,0 +1,159 @@
+/******************************************************************
+Stylesheet: Bones v1
+URL: http://www.themble.com/bones
+
+Author: Eddie Machado (http://themble.com)
+Illustrator: Melanie Matthews (http://melaniematthews.com)
+
+Description: The pirate version of bones with an animated rocking ship. This project was illustrated by the lovely Melanie Matthews.
+
+This stylesheet is commented thoroughly as a learning tool. Please
+don't steal or copy the code exactly. You can copy snippets and 
+expiriment to achieve similar goals, but don't use these images
+without my consent. Thanks!
+******************************************************************/
+
+/*********************
+THE SKY
+*********************/
+	
+/* clouds bg */
+#bones-banner {
+	background-image: url(../images/backdrop.png);
+	background-position: 30px center;
+	background-repeat: no-repeat;
+}	
+
+
+
+
+	.bones-water {
+		position: relative;
+	}
+	
+
+	.bones-water:before, .bones-water:after {
+		position:absolute; 
+		height: 100%; 
+		width: 100%;
+		margin: 0 auto;
+	}
+	
+		.bones-water:before {
+			content: "";
+			background: url(../images/fish1.png) 0 100% repeat-y;
+			z-index: -2;
+		}
+			
+		.bones-water:after {
+			content: "";
+			top: 0;
+			background: url(../images/fish2.png) 0 170% repeat-y;
+			z-index:-1; 
+		}
+	
+	#an-shark {
+		position: absolute;
+		bottom: -30px;
+		z-index: 8001;
+		-webkit-animation: shark-swim 8s infinite ease-in-out;
+		-moz-animation: shark-swim 8s infinite ease-in-out;
+		animation: shark-swim 8s infinite ease-in-out;
+	}
+	
+	#an-ship {
+		position: absolute;
+		bottom: 45px;
+		left: 30px;
+		z-index: 8001;
+		-webkit-animation: rockingboat 5s infinite ease-in-out;
+		-moz-animation: rockingboat 5s infinite ease-in-out;
+		animation: rockingboat 5s infinite ease-in-out;
+	}
+	
+	#an-w1 {
+		width: 100%;
+		height: 78px;
+		position: absolute;
+		bottom: 60px;
+		background-image: url(../images/waves1.png);
+		background-repeat: repeat-x;
+		z-index: 8000;
+		display: block;
+		-webkit-animation: wave1 23s infinite linear;
+	}
+	
+	#an-w2 {
+		width: 100%;
+		height: 300px;
+		position: absolute;
+		bottom: 0;
+		margin-bottom: -200px;
+		background-image: url(../images/waves2.png);
+		background-repeat: repeat-x;
+		z-index: 8003;
+		display: block;
+		-webkit-animation: wave2 17s infinite linear;
+	}
+	
+	#an-w2:after {
+		width: 100%;
+		height: 140px;
+		position: absolute;
+		bottom: 30% ;
+		content: url(../images/waves3.png);
+		z-index: 8004;
+		display: block;
+	}
+	
+
+
+/*********************
+ANIMATION SYNTAX
+*********************/
+
+/* sun tilt */
+@keyframes sun-tilt {
+   0%, 100% {  }
+   50% 		{ -webkit-transform: rotate(2deg); }
+}
+
+
+/* ship rocking */
+@-webkit-keyframes rockingboat {
+   0%, 100% { -webkit-transform: rotate(2deg); bottom: 45px; }
+   10%      { }
+   25%      { -webkit-transform: rotate(-2deg); left: 30px; bottom: 40px; }
+   50% 		{ -webkit-transform: rotate(0deg); left: 40px;  }
+   75%      { -webkit-transform: rotate(-2deg); left: 30px; bottom: 50px; }
+   90%      { }
+}
+
+/* background waves */
+@-webkit-keyframes wave1 {
+    0% {
+     background-position-y: 0;
+     background-position-x: 0px;
+   }
+   50% {
+      background-position-y: 20px;
+   } 
+   100% {
+     background-position-y: 0;
+     background-position-x: -1198px;
+   }
+}
+
+
+@-webkit-keyframes wave2 {
+    0% {
+     background-position-x: 0px;
+   }
+   50% {
+	   background-position-y: 15px;
+   } 
+   100% {
+     
+     background-position-x: -1200px;
+   }
+}
