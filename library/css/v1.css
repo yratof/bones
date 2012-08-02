@@ -154,7 +154,7 @@ ANIMATION SYNTAX
 @-webkit-keyframes shark-bob {
     0% { left: 250px;  bottom: 120px; opacity: 0;  z-index: -1;   -webkit-transform: rotate(1deg);   }
     7% {               bottom: 95px;  opacity: 1; z-index: 8002;                                    }
-   60% { left: 575px;  bottom: 20px;                                 -webkit-transform: rotate(-10deg); } 
+   60% { left: 575px;  bottom: 80px;                                 -webkit-transform: rotate(-10deg); } 
    70% { left: 700px;                                                 -webkit-transform: rotate(-13deg); }
    73% {               bottom: 10px;                                 -webkit-transform: rotate(-16deg); }
    75% { left: 850px;  bottom: -30px;                                  -webkit-transform: rotate(-13deg); }
