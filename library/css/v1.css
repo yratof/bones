@@ -31,9 +31,7 @@ without my consent. Thanks!
 
 	
 	#an-shark {
-		display: block;
 		position: absolute;
-		bottom: -30px;
 		z-index: 8001;
 		-webkit-animation: shark-bob 8s infinite ease-in-out;
 		animation:         shark-bob 8s infinite ease-in-out;
