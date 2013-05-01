@@ -30,7 +30,7 @@ require_once('library/bones.php'); // if you remove this, bones will break
 	- example custom taxonomy (like categories)
 	- example custom taxonomy (like tags)
 */
-require_once('library/custom-post-type.php'); // you can disable this if you like
+//require_once('library/custom-post-type.php'); // you can disable this if you like
 /*
 3. library/admin.php
 	- removing some default WordPress dashboard widgets
@@ -79,6 +79,16 @@ function bones_register_sidebars() {
 		'name' => __('Sidebar 1', 'bonestheme'),
 		'description' => __('The first (primary) sidebar.', 'bonestheme'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+	register_sidebar(array(
+		'id' => 'footer',
+		'name' => __('Footer', 'bonestheme'),
+		'description' => __('The Footer.', 'bonestheme'),
+		'before_widget' => '<div id="%1$s" class="widget threecol %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
